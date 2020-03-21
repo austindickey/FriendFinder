@@ -24,8 +24,6 @@ module.exports = function(app) {
             allScores.push(scoreSum)
         }
 
-        console.log("scores array: " + allScores)
-
         var highestIndex = allScores.length - 1
         
         for (let i = 0; i < allScores.length; i++) {
