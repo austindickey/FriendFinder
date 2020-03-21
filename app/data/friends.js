@@ -2,7 +2,7 @@ var friendList =
     [
         {
             "name":"Ryan",
-            "photo":"./img/Ryan.jpg",
+            "photo":"https://github.com/austindickey/FriendFinder/blob/master/img/Ryan.jpg?raw=true",
             "scores":[
                 4,
                 5,
@@ -18,7 +18,7 @@ var friendList =
         },
         {
             "name":"James",
-            "photo":"./img/James.jpg",
+            "photo":"https://github.com/austindickey/FriendFinder/blob/master/img/James.jpg?raw=true",
             "scores":[
                 3,
                 3,
@@ -34,7 +34,7 @@ var friendList =
         },
         {
             "name":"Seth",
-            "photo":"./img/Seth.jpg",
+            "photo":"https://github.com/austindickey/FriendFinder/blob/master/img/Seth.jpg?raw=true",
             "scores":[
                 5,
                 1,
@@ -50,7 +50,7 @@ var friendList =
         },
         {
             "name":"Emma",
-            "photo":"./img/Emma.jpg",
+            "photo":"https://github.com/austindickey/FriendFinder/blob/master/img/Emma.jpg?raw=true",
             "scores":[
                 5,
                 2,
@@ -66,7 +66,7 @@ var friendList =
         },
         {
             "name":"Sophia",
-            "photo":"./img/Sophia.jpg",
+            "photo":"https://github.com/austindickey/FriendFinder/blob/master/img/Sophia.jpg?raw=true",
             "scores":[
                 2,
                 4,
@@ -82,7 +82,7 @@ var friendList =
         },
         {
             "name":"Penny",
-            "photo":"./img/Penny.jpg",
+            "photo":"https://github.com/austindickey/FriendFinder/blob/master/img/Penny.jpg?raw=true",
             "scores":[
                 3,
                 1,

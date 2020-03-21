@@ -7,7 +7,7 @@
 
     <!-- Latest compiled and minified CSS & JS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   
     <!-- Font Awesome Glyphicons -->
@@ -216,7 +216,7 @@
     </div>
     
     <!-- Modal -->
-    <div id="results-model" class="modal fade" role="dialog">
+    <div id="results-modal" class="modal fade" role="dialog">
         <div class="modal-dialog">
     
         <!-- Modal content-->
@@ -237,5 +237,71 @@
         </div>
     </div>
 
+    <script type="text/javascript">
+        $("#submit").on("click", function (event) {
+            event.preventDefault()
+    
+            // Validating the data
+            function validateData() {
+                var isValid = true
+                $(".form-control").each(function () {
+                    if ($(this).val() === "") {
+                        isValid = false
+                    }
+                })
+    
+                $(".chosen-select").each(function () {
+                    if ($(this).val() === "") {
+                        isValid = false
+                    }
+                })
+                return isValid
+            }
+    
+            if (validateData()) {
+                // Grabbing the data
+                var newFriend = {
+                    name: $("#name").val().trim(),
+                    photo: $("#photo").val().trim(),
+                    scores: [
+                        $("#q1").val().trim(),
+                        $("#q2").val().trim(),
+                        $("#q3").val().trim(),
+                        $("#q4").val().trim(),
+                        $("#q5").val().trim(),
+                        $("#q6").val().trim(),
+                        $("#q7").val().trim(),
+                        $("#q8").val().trim(),
+                        $("#q9").val().trim(),
+                        $("#q10").val().trim()
+                    ]
+                }
+
+                $.post("/api/friends", newFriend, function (data) {
+                    $("#match-name").text(data.name)
+                    $("#match-img").attr("src", data.photo)
+                    $("#results-modal").modal("toggle")
+                })
+    
+                // Clearing the form
+                $("#name").val("")
+                $("#photo").val("")
+                $("#q1").val("")
+                $("#q2").val("")
+                $("#q3").val("")
+                $("#q4").val("")
+                $("#q5").val("")
+                $("#q6").val("")
+                $("#q7").val("")
+                $("#q8").val("")
+                $("#q9").val("")
+                $("#q10").val("")
+    
+            } else {
+                alert("Please fill out all of the fields before submitting!")
+            }
+    
+        })
+    </script>
 </body>
 </html>
