@@ -2,6 +2,8 @@
 
 This is a friend finder web app that runs on an express server. It compares your data with the current database of friends to find the best match.
 
+Deployed website url: https://calm-cliffs-62308.herokuapp.com/
+
 ---
 
 ### **NPM Dependencies**
@@ -12,7 +14,7 @@ This is a friend finder web app that runs on an express server. It compares your
 ---
 
 ### **Initial Setup**
-Navigate to the folder in your terminal, and install all the necessary dependencies with:
+If you want to set this app up locally, navigate to the folder in your terminal, and install all the necessary dependencies with:
 
 ```
 npm i
